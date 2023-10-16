@@ -24,7 +24,7 @@ When the JSON log viewer is started a modal pops up to define the `data`, `level
 
 ## Sample Log Data
 
-![Alt text](image-1.png)
+![Alt text](image-2.png)
 
 ## License
 
