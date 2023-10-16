@@ -9,7 +9,7 @@ The `json-log-viewer` uses the [allproxy](https://github.com/allproxy/allproxy) 
 ![image](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![image](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-### Install
+## Install
 
 > Install options:
 > 1. Clone repo and run app: **npm install && npm start**
@@ -17,8 +17,14 @@ The `json-log-viewer` uses the [allproxy](https://github.com/allproxy/allproxy) 
 >    * http://localhost:8888/logviewer in browser
 > 3. Install the [allproxy](https://github.com/allproxy/allproxy) package.
 
+## Configuration
+When the JSON log viewer is started a modal pops up to define the `data`, `level`, `app name` and `message` for your JSON log.  Addition JSON fields may also be annotated.
 
-todo: add images
+![Alt text](image.png)
+
+## Sample Log Data
+
+![Alt text](image-1.png)
 
 ## License
 
