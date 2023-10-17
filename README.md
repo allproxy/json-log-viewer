@@ -16,7 +16,8 @@ The `jlogviewer` uses the [allproxy](https://github.com/allproxy/allproxy) packa
 > 2. Clone repo and run headless: `npm install && npm run headless`
 >    * http://localhost:8888/logviewer in browser
 > 3. Install `jlogviewer` package: `npm install -g jlogviewer`
->    * Run: `jlogviewer` or `jlogviewer headless`
+>    * Run: `jlogviewer` or `jlogviewer-app`
+>    * http://localhost:8888/logviewer in browser
 > 4. Install the [allproxy](https://github.com/allproxy/allproxy) package.
 
 ## Configuration
