@@ -7,4 +7,5 @@ if [ ! -z "$SYMLINK" ]; then
 fi
 cd $BIN_DIR
 
-npm run headless
+npm start
+
