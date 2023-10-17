@@ -7,7 +7,10 @@
     "logging",
     "json-log"
   ],
-  "bin": "bin/jlogviewer",
+  "bin": {
+    "jlogviewer": "./bin/jlogviewer",
+    "jlogviewer-app": "./bin/jlogviewer-app"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
