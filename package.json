@@ -1,5 +1,5 @@
 {
-  "name": "json-log-viewer",
+  "name": "json-logviewer",
   "version": "1.0.0",
   "description": "JSON Log Viewer is a development tool for working with structured JSON logging.",
   "keywords": [
@@ -7,6 +7,7 @@
     "logging",
     "json-log"
   ],
+  "bin": "bin/json-logviewer",
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
@@ -14,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allproxy/json-log-viewer.git"
+    "url": "git+https://github.com/allproxy/json-logviewer.git"
   },
   "author": "Dave Christenson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/allproxy/json-log-viewer/issues"
+    "url": "https://github.com/allproxy/json-logviewer/issues"
   },
-  "homepage": "https://github.com/allproxy/json-log-viewer#readme",
+  "homepage": "https://github.com/allproxy/json-logviewer#readme",
   "dependencies": {
     "command-exists": "^1.2.9"
   }

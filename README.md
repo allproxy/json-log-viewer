@@ -2,7 +2,7 @@
 JSON Log Viewer is a UI development tool for working with structured JSON logging.
 <p>
 
-The `json-log-viewer` uses the [allproxy](https://github.com/allproxy/allproxy) package.
+The `json-logviewer` uses the [allproxy](https://github.com/allproxy/allproxy) package.
 <p>
 
 ![image](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
