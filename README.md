@@ -29,7 +29,7 @@ $ jlogviewer
 
 **Windows**
 ```sh
-$ jlogviewer.bat
+$ jlogviewer_win.bat
 ```
 
 **Open in browser:**
@@ -44,7 +44,7 @@ $ jlogviewer-app
 
 **Windows**
 ```sh
-$ jlogviewer-app.bat
+$ jlogviewer-app_win.bat
 ```
 
 ## Configuration
