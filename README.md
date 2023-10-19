@@ -11,6 +11,12 @@ The `jlogviewer` uses the [allproxy](https://github.com/allproxy/allproxy) packa
 
 ## Install
 
+**Install allproxy package**
+```sh
+$ npm install -g allproxy
+```
+
+**Install jlogviewer package**
 ```sh
 $ npm install -g jlogviewer
 ```
