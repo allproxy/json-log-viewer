@@ -11,14 +11,20 @@ The `jlogviewer` uses the [allproxy](https://github.com/allproxy/allproxy) packa
 
 ## Install
 
-> Install options:
+> All platforms:
 > 1. Clone repo and run app: `npm install && npm start`
-> 2. Clone repo and run headless: `npm install && npm run headless`
+> 2. Install the [allproxy](https://github.com/allproxy/allproxy) package.
+
+> Mac and Linux:
+> 1. Clone repo and run headless: `npm install && npm run headless`
 >    * http://localhost:8888/logviewer in browser
-> 3. Install `jlogviewer` package: `npm install -g jlogviewer`
+> 2. Install `jlogviewer` package: `npm install -g jlogviewer`
 >    * Run: `jlogviewer` or `jlogviewer-app`
 >    * http://localhost:8888/logviewer in browser
-> 4. Install the [allproxy](https://github.com/allproxy/allproxy) package.
+
+> Windows:
+> 1. Install `jlogviewer` package: `npm install -g jlogviewer`
+>    * Run: `jlogviewer.bat`
 
 ## Configuration
 When the JSON log viewer is started a modal pops up to define the `data`, `level`, `app name` and `message` for your JSON log.  Addition JSON fields may also be annotated.

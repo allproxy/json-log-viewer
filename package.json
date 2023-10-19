@@ -9,7 +9,8 @@
   ],
   "bin": {
     "jlogviewer": "./bin/jlogviewer",
-    "jlogviewer-app": "./bin/jlogviewer-app"
+    "jlogviewer-app": "./bin/jlogviewer-app",
+    "jlogviewer.bat": "./bin/jlogviewer.bat"
   },
   "main": "index.js",
   "scripts": {
