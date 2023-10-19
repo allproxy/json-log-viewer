@@ -11,13 +11,13 @@ if (!commandExistsSync('allproxy')) {
 
 let apCommand = '';
 if (process.platform === 'win32') {
-    if (arg === 'headless') {
-        console.log('Windows will not run headless')
-        return;
-    }
     const dir = process.env.AppData + '\\npm\\node_modules\\allproxy';
     process.chdir(dir);
-    apCommand = 'npm start'; // headless is not supported for windows
+    if (arg === 'headless') {
+        apCommand = 'npm run headless';
+    } else {
+        apCommand = 'npm start';
+    }
 } else {
     apCommand = `ALLPROXY_APP=logviewer allproxy ${arg}`;
 }
