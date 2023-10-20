@@ -23,6 +23,8 @@ $ npm install -g allproxy
 $ npm install -g jlogviewer
 ```
 
+To update the `allproxy` and `jlogviewer` packages re-run the `npm install -g xxx` command.
+
 ## Run in Browser
 **Mac/Linux**
 ```sh
