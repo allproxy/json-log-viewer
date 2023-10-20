@@ -2,7 +2,9 @@
 JSON Log Viewer is a UI development tool for working with structured JSON logging.
 <p>
 
-The `jlogviewer` uses the [allproxy](https://github.com/allproxy/allproxy) package.
+It is designed to efficiently view JSON logs that are smaller than 10,000 records.  The ideal use case is to first filter a very large log to a smaller size that can be handled by `jlogviewer`.
+
+The web application is provided by the [allproxy](https://github.com/allproxy/allproxy) package.
 <p>
 
 ![image](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
