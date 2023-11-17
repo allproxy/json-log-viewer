@@ -1,6 +1,6 @@
 {
   "name": "jlogviewer",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "JSON Log Viewer is a development tool for working with structured JSON logging.",
   "keywords": [
     "json",
