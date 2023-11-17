@@ -39,6 +39,10 @@ $ jlogviewer_win.bat
 **Open in browser:**
 [localhost:8888/jlogviewer](http://localhost:8888/jlogviewer)
 
+## Install AllProxy Application
+
+The `JLogViewer` is also supported by the `AllProxy` application which can be installed [here](https://github.com/allproxy/allproxy/releases/).
+
 ## Configuration
 When the JSON log viewer is started a modal pops up to define the `data`, `level`, `app name` and `message` for your JSON log.  Addition JSON fields may also be annotated.
 
