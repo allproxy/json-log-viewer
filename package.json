@@ -1,6 +1,6 @@
 {
   "name": "jlogviewer",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "JSON Log Viewer is a development tool for working with structured JSON logging.",
   "keywords": [
     "json",
@@ -9,14 +9,11 @@
   ],
   "bin": {
     "jlogviewer": "./bin/jlogviewer",
-    "jlogviewer-app": "./bin/jlogviewer-app",
-    "jlogviewer_win.bat": "./bin/jlogviewer_win.bat",
-    "jlogviewer-app_win.bat": "./bin/jlogviewer-app_win.bat"
+    "jlogviewer_win.bat": "./bin/jlogviewer_win.bat"
   },
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js",
-    "headless": "node ./index.js headless"
+    "start": "node ./index.js"
   },
   "repository": {
     "type": "git",
