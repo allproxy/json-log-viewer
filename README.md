@@ -39,18 +39,6 @@ $ jlogviewer_win.bat
 **Open in browser:**
 [localhost:8888/jlogviewer](http://localhost:8888/jlogviewer)
 
-
-## Run as App
-**Mac/Linux**
-```sh
-$ jlogviewer-app
-```
-
-**Windows**
-```sh
-$ jlogviewer-app_win.bat
-```
-
 ## Configuration
 When the JSON log viewer is started a modal pops up to define the `data`, `level`, `app name` and `message` for your JSON log.  Addition JSON fields may also be annotated.
 
