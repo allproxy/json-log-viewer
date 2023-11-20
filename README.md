@@ -46,6 +46,32 @@ $ jlogviewer_win.bat
 
 The `JLogViewer` is also supported by the `AllProxy` application which can be installed [here](https://github.com/allproxy/allproxy/releases/).
 
+## Filtering
+
+Show responses with status greater than or equal to 400:
+
+![Alt text](image-2.png)
+
+Show 403 responses:
+
+![Alt text](image-8.png)
+
+Show `wget` clients:
+
+![Alt text](image-9.png)
+
+Show responses that are greater than 1000 bytes:
+
+![Alt text](image-5.png)
+
+Sort by remote_ip in ascending order:
+
+![Alt text](image-6.png)
+
+Show non-GET requests:
+
+![Alt text](image-7.png)
+
 ## License
 
 This code is licensed under the [MIT License](https://opensource.org/licenses/MIT).
