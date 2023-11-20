@@ -1,6 +1,9 @@
 <h1 align="center" style="border-bottom: none;">jlogviewer: JSON Log Viewer</h1>
 JSON Log Viewer is a UI development tool for working with structured JSON logging.
-<p>
+<p></p>
+
+![Alt text](image-3.png)
+![Alt text](image-1.png)
 
 It is designed to efficiently view JSON logs that are smaller than 10,000 records.  The ideal use case is to first filter a very large log to a smaller size that can be handled by `jlogviewer`.
 
@@ -42,15 +45,6 @@ $ jlogviewer_win.bat
 ## Install AllProxy Application
 
 The `JLogViewer` is also supported by the `AllProxy` application which can be installed [here](https://github.com/allproxy/allproxy/releases/).
-
-## Configuration
-When the JSON log viewer is started a modal pops up to define the `data`, `level`, `app name` and `message` for your JSON log.  Addition JSON fields may also be annotated.
-
-![Alt text](image.png)
-
-## Sample Log Data
-
-![Alt text](image-2.png)
 
 ## License
 

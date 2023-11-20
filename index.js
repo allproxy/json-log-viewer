@@ -13,11 +13,7 @@ let apCommand = '';
 if (process.platform === 'win32') {
     const dir = process.env.AppData + '\\npm\\node_modules\\allproxy';
     process.chdir(dir);
-    if (arg === 'headless') {
-        apCommand = 'npm run headless';
-    } else {
-        apCommand = 'npm start';
-    }
+    apCommand = 'npm start';
 } else {
     apCommand = `ALLPROXY_APP=logviewer allproxy ${arg}`;
 }
