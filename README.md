@@ -1,5 +1,7 @@
 <h1 align="center" style="border-bottom: none;">jlogviewer: JSON Log Viewer</h1>
-JSON Log Viewer is a UI development tool for working with structured JSON logging.
+JSON Log Viewer is a UI development tool that makes JSON logs human readable.
+<p></p>
+JSON fields can be automatically or manually annotated.  Filtering makes it easy to find relevant log records.
 <p></p>
 
 ![Alt text](image-4.png)
@@ -42,31 +44,41 @@ $ jlogviewer_win.bat
 
 ## Install AllProxy Application
 
-The `JLogViewer` is also supported by the `AllProxy` application which can be installed [here](https://github.com/allproxy/allproxy/releases/).
+The `JLogViewer` is integrated into the `AllProxy` application which can be installed [here](https://github.com/allproxy/allproxy/releases/).
 
 ## Filtering
 
-Show responses with status greater than or equal to 400:
+Advanced JSON field and boolean filters can be used to find relevant log records.
+
+Example filters:
+* Filter `response:>400` shows responses with status greater than or equal to 400
+* Filter `response:403` shows 403 responses
+* Filter `agent:wget` shows `wget` clients
+* Filter `bytes:>1000` shows responses that are greater than 1000 bytes
+* Filter `remote_ip:*` can be used to sort remote IP addresses in ascending order
+* Filter `-request:GET` shows non-GET requests
+
+Filter `response:>400` shows responses with status greater than or equal to 400:
 
 ![Alt text](image-2.png)
 
-Show 403 responses:
+Filter `response:403` shows 403 responses:
 
 ![Alt text](image-8.png)
 
-Show `wget` clients:
+Filter `agent:wget` shows `wget` clients:
 
 ![Alt text](image-9.png)
 
-Show responses that are greater than 1000 bytes:
+Filter `bytes:>1000` shows responses that are greater than 1000 bytes:
 
 ![Alt text](image-5.png)
 
-Sort by remote_ip in ascending order:
+Filter `remote_ip:*` can be used to sort remote IP addresses in ascending order:
 
 ![Alt text](image-6.png)
 
-Show non-GET requests:
+Filter `-request:GET` shows non-GET requests:
 
 ![Alt text](image-7.png)
 
