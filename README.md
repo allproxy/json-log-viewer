@@ -58,30 +58,6 @@ Example filters:
 * Filter `remote_ip:*` can be used to sort remote IP addresses in ascending order
 * Filter `-request:GET` shows non-GET requests
 
-Filter `response:>400` shows responses with status greater than or equal to 400:
-
-![Alt text](image-2.png)
-
-Filter `response:403` shows 403 responses:
-
-![Alt text](image-8.png)
-
-Filter `agent:wget` shows `wget` clients:
-
-![Alt text](image-9.png)
-
-Filter `bytes:>1000` shows responses that are greater than 1000 bytes:
-
-![Alt text](image-5.png)
-
-Filter `remote_ip:*` can be used to sort remote IP addresses in ascending order:
-
-![Alt text](image-6.png)
-
-Filter `-request:GET` shows non-GET requests:
-
-![Alt text](image-7.png)
-
 ## License
 
 This code is licensed under the [MIT License](https://opensource.org/licenses/MIT).
