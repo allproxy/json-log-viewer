@@ -10,7 +10,7 @@ Source Code: [github.com/allproxy/jlogviewer](https://github.com/allproxy/jlogvi
 ![Alt text](image-3.png)
 
 The web application is provided by the [allproxy](https://github.com/allproxy/allproxy) package.
-<p>
+<p></p>
 
 ![image](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
 ![image](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
