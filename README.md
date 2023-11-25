@@ -3,6 +3,8 @@ JSON Log Viewer is a UI development tool that makes JSON logs human readable.
 <p></p>
 JSON fields can be automatically or manually annotated.  Filtering makes it easy to find relevant log records.
 <p></p>
+Source Code: [github.com/allproxy/jlogviewer](https://github.com/allproxy/jlogviewer)
+<p></p>
 
 ![Alt text](image-4.png)
 ![Alt text](image-3.png)
