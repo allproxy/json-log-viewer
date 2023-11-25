@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>jlogviewer | JSON Log Viewer is a development tool for working with structured JSON logging.</title>
+    <meta name="generator" content="Jekyll v3.9.3" />
+    <meta property="og:title" content="jlogviewer" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description"
+        content="JSON Log Viewer is a development tool for working with structured JSON logging." />
+    <meta property="og:description"
+        content="JSON Log Viewer is a development tool for working with structured JSON logging." />
+    <link rel="canonical" href="https://allproxy.github.io/jlogviewer/" />
+    <meta property="og:url" content="https://allproxy.github.io/jlogviewer/" />
+    <meta property="og:site_name" content="jlogviewer" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="jlogviewer" />
+    <meta name="google-site-verification" content="Du6yIQTgo2mO5hF4UyYVTjqdp9LpVf1mcrgpNuLiBlo" />
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"JSON Log Viewer is a development tool for working with structured JSON logging.","headline":"jlogviewer","name":"jlogviewer","url":"https://allproxy.github.io/jlogviewer/"}</script>
+    <!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/jlogviewer/assets/css/style.css?v=de598d4ef9f7724a8d389280faed8338d1218d77">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+    <!-- Setup Google Analytics -->
+
+
+
+    <!-- You can set your favicon here -->
+    <!-- link rel="shortcut icon" type="image/x-icon" href="/jlogviewer/favicon.ico" -->
+
+    <!-- end custom head snippets -->
+
+</head>
+
+<body>
+    <div class="container-lg px-3 my-5 markdown-body">
+
+        <h1><a href="https://allproxy.github.io/jlogviewer/">jlogviewer</a></h1>
+
+
+        <h1 align="center" style="border-bottom: none;">jlogviewer: JSON Log Viewer</h1>
+        <p>JSON Log Viewer is a UI development tool that makes JSON logs human readable.</p>
+        <p></p>
+        <p>JSON fields can be automatically or manually annotated. Filtering makes it easy to find relevant log records.
+        </p>
+        <p></p>
+        <p>Source Code: <a href="https://github.com/allproxy/jlogviewer">github.com/allproxy/jlogviewer</a></p>
+        <p></p>
+
+        <p><img src="/jlogviewer/image-4.png" alt="Alt text" />
+            <img src="/jlogviewer/image-3.png" alt="Alt text" />
+        </p>
+
+        <p>The web application is provided by the <a href="https://github.com/allproxy/allproxy">allproxy</a> package.
+        </p>
+        <p></p>
+
+        <p><img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&amp;logo=apple&amp;logoColor=white"
+                alt="image" />
+            <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&amp;logo=linux&amp;logoColor=black"
+                alt="image" />
+            <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&amp;logo=windows&amp;logoColor=white"
+                alt="image" />
+        </p>
+
+        <h2 id="install">Install</h2>
+
+        <p><strong>Install allproxy package</strong></p>
+        <div class="language-sh highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code><span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">-g</span> allproxy
+</code></pre>
+            </div>
+        </div>
+
+        <p><strong>Install jlogviewer package</strong></p>
+        <div class="language-sh highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code><span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">-g</span> jlogviewer
+</code></pre>
+            </div>
+        </div>
+
+        <p>To update the <code class="language-plaintext highlighter-rouge">allproxy</code> and <code
+                class="language-plaintext highlighter-rouge">jlogviewer</code> packages re-run the <code
+                class="language-plaintext highlighter-rouge">npm install -g xxx</code> command.</p>
+
+        <h2 id="run-in-browser">Run in Browser</h2>
+        <p><strong>Mac/Linux</strong></p>
+        <div class="language-sh highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code><span class="nv">$ </span>jlogviewer
+</code></pre>
+            </div>
+        </div>
+
+        <p><strong>Windows</strong></p>
+        <div class="language-sh highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code><span class="nv">$ </span>jlogviewer_win.bat
+</code></pre>
+            </div>
+        </div>
+
+        <p><strong>Open in browser:</strong>
+            <a href="http://localhost:8888/jlogviewer">localhost:8888/jlogviewer</a>
+        </p>
+
+        <h2 id="install-allproxy-application">Install AllProxy Application</h2>
+
+        <p>The <code class="language-plaintext highlighter-rouge">JLogViewer</code> is integrated into the <code
+                class="language-plaintext highlighter-rouge">AllProxy</code> application which can be installed <a
+                href="https://github.com/allproxy/allproxy/releases/">here</a>.</p>
+
+        <h2 id="filtering">Filtering</h2>
+
+        <p>Advanced JSON field and boolean filters can be used to find relevant log records.</p>
+
+        <p>Example filters:</p>
+        <ul>
+            <li>Filter <code class="language-plaintext highlighter-rouge">response:&gt;400</code> shows responses with
+                status greater than or equal to 400</li>
+            <li>Filter <code class="language-plaintext highlighter-rouge">response:403</code> shows 403 responses</li>
+            <li>Filter <code class="language-plaintext highlighter-rouge">agent:wget</code> shows <code
+                    class="language-plaintext highlighter-rouge">wget</code> clients</li>
+            <li>Filter <code class="language-plaintext highlighter-rouge">bytes:&gt;1000</code> shows responses that are
+                greater than 1000 bytes</li>
+            <li>Filter <code class="language-plaintext highlighter-rouge">remote_ip:*</code> can be used to sort remote
+                IP addresses in ascending order</li>
+            <li>Filter <code class="language-plaintext highlighter-rouge">-request:GET</code> shows non-GET requests
+            </li>
+        </ul>
+
+        <h2 id="license">License</h2>
+
+        <p>This code is licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+
+        <p><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&amp;logo=node.js&amp;logoColor=white"
+                alt="image" /></p>
+
+
+
+
+        <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+            This site is open source. <a href="https://github.com/allproxy/jlogviewer/edit/master/README.md">Improve
+                this page</a>.
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+        integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+</body>
+
+</html>
