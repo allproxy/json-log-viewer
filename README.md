@@ -16,6 +16,13 @@ The web application is provided by the [allproxy](https://github.com/allproxy/al
 ![image](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![image](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
+** Try JLogViewer Online
+
+To try a `readonly` demo:
+* Click [Try JLogViewer](http://allproxy.ddns.net/jlogviewer)
+* On the left side panel click the `Restore Session` button
+* From the Restore Session Modal click `Restore` to restore the `JSON Log File` session
+
 ## Install
 
 **Install allproxy package**
