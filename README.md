@@ -16,7 +16,7 @@ The web application is provided by the [allproxy](https://github.com/allproxy/al
 ![image](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![image](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-** Try JLogViewer Online
+## Try JLogViewer Online
 
 To try a `readonly` demo:
 * Click [Try JLogViewer](http://allproxy.ddns.net/jlogviewer)
