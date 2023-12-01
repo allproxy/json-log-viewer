@@ -21,7 +21,8 @@ The web application is provided by the [allproxy](https://github.com/allproxy/al
 To try a `readonly` demo:
 * Click [Try JLogViewer](http://allproxy.ddns.net/jlogviewer)
 * On the left side panel click the `Restore Session` button
-* From the Restore Session Modal click `Restore` to restore the `JSON Log File` session
+* From the Restore Session Modal click `Restore` to restore the `Sample NGINX JSON Log` session
+* Select the `Queries` dropdown and click a query to filter the log
 
 ## Install
 
@@ -60,7 +61,7 @@ The `JLogViewer` is integrated into the `AllProxy` application which can be inst
 Advanced JSON field and boolean filters can be used to find relevant log records.
 
 Example filters:
-* Filter `response:>400` shows responses with status greater than or equal to 400
+* Filter `response:>=400` shows responses with status greater than or equal to 400
 * Filter `response:403` shows 403 responses
 * Filter `agent:wget` shows `wget` clients
 * Filter `bytes:>1000` shows responses that are greater than 1000 bytes
