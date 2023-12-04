@@ -19,7 +19,7 @@ The web application is provided by the [allproxy](https://github.com/allproxy/al
 ## Try JLogViewer Online
 
 To try a `readonly` demo:
-* Click [Try JLogViewer](http://allproxy.ddns.net/jlogviewer)
+* Click [Try JLogViewer](https://allproxy.ddns.net/jlogviewer)
 * On the left side panel click the `Restore Session` button
 * From the Restore Session Modal click `Restore` to restore the `Sample NGINX JSON Log` session
 * Select the `Queries` dropdown and click a query to filter the log
