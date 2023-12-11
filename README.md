@@ -51,6 +51,10 @@ $ jlogviewer_win.bat
 
 **Open in browser:**
 [localhost:8888/jlogviewer](http://localhost:8888/jlogviewer)
+---
+**NOTE**:
+It is recommended that `Use hardware acceleration when available` is disabled on Chrome.
+---
 
 ## Install AllProxy Application
 
