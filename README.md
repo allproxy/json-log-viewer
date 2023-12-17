@@ -6,12 +6,6 @@ JSON fields can be automatically or manually annotated.  Filtering makes it easy
 Source Code: [github.com/allproxy/jlogviewer](https://github.com/allproxy/jlogviewer)
 <p></p>
 
-![Alt text](image-4.png)
-![Alt text](image-3.png)
-
-The web application is provided by the [allproxy](https://github.com/allproxy/allproxy) package.
-<p></p>
-
 ![image](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
 ![image](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![image](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
@@ -19,46 +13,27 @@ The web application is provided by the [allproxy](https://github.com/allproxy/al
 ## Try JLogViewer Online
 
 To try a `readonly` demo:
-* Click [Try JLogViewer](https://allproxy.ddns.net/jlogviewer)
-* On the left side panel click the `Restore Session` button
+* Click [Try it out](https://allproxy.ddns.net/jlogviewer)
+** On the left side panel click the `Restore Session` button
 * From the Restore Session Modal click `Restore` to restore the `Sample NGINX JSON Log` session
 * Select the `Queries` dropdown and click a query to filter the log
 
 ## Install
 
-**Install allproxy package**
-```sh
-$ npm install -g allproxy
-```
+> Clone repo and run: **npm install && npm start**
 
-**Install jlogviewer package**
-```sh
-$ npm install -g jlogviewer
-```
+> Open `JSON Log Viewer` in browser;
+>    * [localhost:8888/jlogviewer](http://localhost:8888/jlogviewer)
 
-To update the `allproxy` and `jlogviewer` packages re-run the `npm install -g xxx` command.
+### Updating
 
-## Run in Browser
-**Mac/Linux**
-```sh
-$ jlogviewer
-```
+The JSON Log Viewer uses the [allproxy](https://github.com/allproxy/allproxy) package.
 
-**Windows**
-```sh
-$ jlogviewer_win.bat
-```
+To update the `allproxy` npm package run:
+> **npm update**
 
-**Open in browser:**
-[localhost:8888/jlogviewer](http://localhost:8888/jlogviewer)
----
-**NOTE**:
+*NOTE**:
 It is recommended that `Use hardware acceleration when available` is disabled on Chrome.
----
-
-## Install AllProxy Application
-
-The `JLogViewer` is integrated into the `AllProxy` application which can be installed [here](https://github.com/allproxy/allproxy/releases/).
 
 ## Filtering
 
@@ -77,4 +52,3 @@ Example filters:
 This code is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ![image](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-
