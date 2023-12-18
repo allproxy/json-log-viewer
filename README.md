@@ -20,7 +20,9 @@ To try a `readonly` demo:
 
 ## Install
 
-> Clone repo and run: **npm install && npm start**
+> 1. Clone repo.
+> 2. `npm install` # The production build may take a minute...
+> 3. `npm start`
 
 > Open `JSON Log Viewer` in browser;
 >    * [localhost:8888/jlogviewer](http://localhost:8888/jlogviewer)
