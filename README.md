@@ -6,6 +6,8 @@ JSON fields can be automatically or manually annotated.  Filtering makes it easy
 Source Code: [github.com/allproxy/jlogviewer](https://github.com/allproxy/jlogviewer)
 <p></p>
 
+![Alt text](image-1.png)
+
 ![image](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
 ![image](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![image](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
@@ -48,6 +50,29 @@ Example filters:
 * Filter `bytes:>1000` shows responses that are greater than 1000 bytes
 * Filter `remote_ip:*` can be used to sort remote IP addresses in ascending order
 * Filter `-request:GET` shows non-GET requests
+
+**Filter `response:>=400` shows responses with status**
+![Alt text](image.png)
+
+**Filter `response:403` shows 403 responses**
+![Alt text](image-2.png)
+
+**Filter `agent:wget` shows `wget` clients**
+![Alt text](image-3.png)
+
+**Filter `bytes:>1000` shows responses that are greater**
+![Alt text](image-4.png)
+
+**Filter `remote_ip:*` can be used to sort remote IP addresses in ascending order**
+![Alt text](image-5.png)
+
+**Filter `-request:GET` shows non-GET requests**
+![Alt text](image-6.png)
+
+## Documentation
+
+User documentation is integrated into the app.
+![Alt text](image-7.png)
 
 ## License
 
