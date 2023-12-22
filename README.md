@@ -24,7 +24,11 @@ You may also make local configuration changes:
 * Edit `Queries`
 * Click the gear icon in the uppert right to change `JSON Settings`
 
-## Install
+### Install NPM Package
+> 1. `npm install -g jlogviewer`
+> 2. Run `jlogviewer`
+
+### Build Package
 
 > 1. Clone repo.
 > 2. `npm install` # The production build may take a minute...

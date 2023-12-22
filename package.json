@@ -10,7 +10,7 @@
   "main": "index.js",
   "bin": {
     "jlogviewer": "bin/jlogviewer",
-    "allproxy_win.bat": "bin/jlogviewer.bat"
+    "jlogviewer_win.bat": "bin/jlogviewer.bat"
   },
   "scripts": {
     "start": "cd ./node_modules/allproxy && ALLPROXY_APP=jlogviewer node ./headless.js"
