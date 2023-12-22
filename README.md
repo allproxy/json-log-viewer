@@ -20,6 +20,10 @@ To try a `readonly` demo:
 * From the Restore Session Modal click `Restore` to restore the `Sample NGINX JSON Log` session
 * Select the `Queries` dropdown and click a query to filter the log
 
+You may also make local configuration changes:
+* Edit `Queries`
+* Click the gear icon in the uppert right to change `JSON Settings`
+
 ## Install
 
 > 1. Clone repo.

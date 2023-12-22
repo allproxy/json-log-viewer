@@ -1,6 +1,6 @@
 {
   "name": "jlogviewer",
-  "version": "1.0.0",
+  "version": "3.45.0",
   "description": "JSON Log Viewer",
   "keywords": [
     "json",
@@ -8,6 +8,10 @@
     "json-log"
   ],
   "main": "index.js",
+  "bin": {
+    "jlogviewer": "bin/jlogviewer",
+    "allproxy_win.bat": "bin/jlogviewer.bat"
+  },
   "scripts": {
     "start": "cd ./node_modules/allproxy && ALLPROXY_APP=jlogviewer node ./headless.js"
   },
