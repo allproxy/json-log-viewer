@@ -12,17 +12,10 @@ Source Code: [github.com/allproxy/jlogviewer](https://github.com/allproxy/jlogvi
 ![image](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![image](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-## Try JLogViewer Online
+## JLogViewer Online
 
-To try a `readonly` demo:
-* Click [Try it out](https://allproxy.ddns.net/jlogviewer)
-** On the left side panel click the `Restore Session` button
-* From the Restore Session Modal click `Restore` to restore the `Sample NGINX JSON Log` session
-* Select the `Queries` dropdown and click a query to filter the log
-
-You may also make local configuration changes:
-* Edit `Queries`
-* Click the gear icon in the uppert right to change `JSON Settings`
+* Click [https://allproxy.github.io/jlogviewer/](https://allproxy.github.io/jlogviewer/)
+* Click **?** in the upper right and click the **Edit JavaScript** button to define JavaScript code to extract the Date, App Name, Message from your log records.
 
 ### Install NPM Package
 > 1. `npm install -g jlogviewer`
