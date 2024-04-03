@@ -1,0 +1,28 @@
+// Function called to extract date, level, app name and message
+//
+// @param preJSONString: string - optional non-JSON string proceeding JSON object
+// @param jsonObject: {} - JSON log data
+// @returns {date: Date, level: string, category: string, appName: string, message: string, rawLine: string, additionalJSON: {} }
+//
+// category is the availability zone
+// appName is the pod name
+//
+const extractDateLevelCategoryAppNameMessage = function (preJSONString, jsonObject) {
+    let date = new Date();
+    let category = '';
+    let appName = 'App_name_is_not_set';
+    let message = 'Message is not set - Click "?" in upper right for help';
+    let rawLine; // return raw JSON (optional)
+    let additionalJSON = {}; // Copy any JSON fields not defined in jsonObject
+
+    // Set the date
+    //date = jsonObject.my_date;
+
+    // Set the app name
+    //appName = jsonObject.my_app;
+
+    // Set message
+    //message = jsonObject.my_message;
+
+    return { date, level, category, appName, message, rawLine, additionalJSON };
+}
