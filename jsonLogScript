@@ -22,7 +22,7 @@ const extractDateLevelCategoryAppNameMessage = function (preJSONString, jsonObje
     // level = jsonObject.m_level;
 
     // Set the date
-    //date = jsonObject.my_date;
+    // date = jsonObject.my_date;
 
     // Set the app name
     //appName = jsonObject.my_app;
