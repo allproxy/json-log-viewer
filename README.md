@@ -72,8 +72,38 @@ Example filters:
 
 ## Documentation
 
-User documentation is integrated into the app.
+User documentation is integrated into the app.  Click **?** in upper right corner.
 ![Alt text](image-7.png)
+
+# Development Notes
+
+### Updating Version
+
+To update the Log Viewer version to the latest:
+1. npm update # this update the allproxy package
+2. ./copyBuildFromAllProxy.sh <allproxy repo path>
+3. Create branch matching the allproxy version.
+
+The **docs/index.html** needs to be modified so the GitHub Pages app will render properly:
+
+1. These lines must be added to the start of the <header> tag:
+    ```
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    ```
+
+2. Remove '/' from href and src properties.
+
+### Updating Configuration
+
+1. Modify any of these config files:
+    * jsonQueries.json
+    * queries
+    * briefJsonFields.json
+    * jsonFields
+    * jsonSubQueries.json
+    * jsonLogScript
+2. Run **node createApFileSystemJson.js** to build a new docs **apFileSystem.json** file.
 
 ## License
 

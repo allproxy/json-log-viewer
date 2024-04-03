@@ -8,12 +8,18 @@
 // appName is the pod name
 //
 const extractDateLevelCategoryAppNameMessage = function (preJSONString, jsonObject) {
+    let level = 'info';
     let date = new Date();
     let category = '';
     let appName = 'App_name_is_not_set';
-    let message = 'Message is not set - Click "?" in upper right for help';
-    let rawLine; // return raw JSON (optional)
-    let additionalJSON = {}; // Copy any JSON fields not defined in jsonObject
+    let message = 'Message is not set - Click "?" in upper right to extract fields from JSON';
+    // return raw JSON (optional)
+    let rawLine;
+    // Copy any JSON fields not defined in jsonObject
+    let additionalJSON = {};
+
+    // Set the level
+    // level = jsonObject.m_level;
 
     // Set the date
     //date = jsonObject.my_date;
