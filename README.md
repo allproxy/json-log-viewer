@@ -1,9 +1,5 @@
 <h1 align="center" style="border-bottom: none;">json-log-viewer</h1>
-JSON Log Viewer is a UI development tool that makes JSON logs human readable.
-<p></p>
-JSON fields can be automatically or manually annotated.  Filtering makes it easy to find relevant log records.
-<p></p>
-Source Code: [github.com/allproxy/json-log-viewer](https://github.com/allproxy/json-log-viewer)
+JSON Log Viewer is a web UI tool that makes JSON logs human readable.
 <p></p>
 
 ![Alt text](image-1.png)
@@ -16,6 +12,17 @@ Source Code: [github.com/allproxy/json-log-viewer](https://github.com/allproxy/j
 
 * Click [https://allproxy.github.io/json-log-viewer/](https://allproxy.github.io/json-log-viewer/)
 * Click **?** in the upper right and click the **Edit JavaScript** button to define JavaScript code to extract the Date, App Name, Message from your log records.
+
+## Features
+
+1. Online web application served by GitHub Pages.
+2. Displays easy to read compact list of log entries.
+3. Expands to show the full prettified JSON.
+5. Fields are customizable.
+6. Filtering and highlighted search matches.
+7. Log levels are colorized.
+8. Display human readable or UTC timestamps.
+9. Supports JSON lines and JSON file formats.
 
 ### Build Package
 
