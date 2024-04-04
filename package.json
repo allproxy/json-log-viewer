@@ -1,5 +1,5 @@
 {
-  "name": "jlogviewer",
+  "name": "json-log-viewer",
   "version": "3.48.5",
   "description": "JSON Log Viewer",
   "keywords": [
@@ -8,24 +8,20 @@
     "json-log"
   ],
   "main": "index.js",
-  "bin": {
-    "jlogviewer": "bin/jlogviewer",
-    "jlogviewer_win.bat": "bin/jlogviewer.bat"
-  },
   "scripts": {
-    "start": "cd ./node_modules/allproxy && ALLPROXY_APP=jlogviewer node ./headless.js"
+    "start": "cd ./node_modules/allproxy && ALLPROXY_APP=json-log-viewer node ./headless.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allproxy/jlogviewer.git"
+    "url": "git+https://github.com/allproxy/json-log-viewer.git"
   },
   "author": "Dave Christenson",
   "license": "MIT",
   "private": false,
   "bugs": {
-    "url": "https://github.com/allproxy/jlogviewer/issues"
+    "url": "https://github.com/allproxy/json-log-viewer/issues"
   },
-  "homepage": "https://github.com/allproxy/jlogviewer#readme",
+  "homepage": "https://github.com/allproxy/json-log-viewer#readme",
   "dependencies": {
     "allproxy": "^3.43.5"
   }
