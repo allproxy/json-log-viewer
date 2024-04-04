@@ -1,9 +1,9 @@
-<h1 align="center" style="border-bottom: none;">jlogviewer: JSON Log Viewer</h1>
+<h1 align="center" style="border-bottom: none;">json-log-viewer</h1>
 JSON Log Viewer is a UI development tool that makes JSON logs human readable.
 <p></p>
 JSON fields can be automatically or manually annotated.  Filtering makes it easy to find relevant log records.
 <p></p>
-Source Code: [github.com/allproxy/jlogviewer](https://github.com/allproxy/jlogviewer)
+Source Code: [github.com/allproxy/json-log-viewer](https://github.com/allproxy/json-log-viewer)
 <p></p>
 
 ![Alt text](image-1.png)
@@ -12,14 +12,10 @@ Source Code: [github.com/allproxy/jlogviewer](https://github.com/allproxy/jlogvi
 ![image](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![image](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-## JLogViewer Online
+## JSON Log Viewer Online
 
-* Click [https://allproxy.github.io/jlogviewer/](https://allproxy.github.io/jlogviewer/)
+* Click [https://allproxy.github.io/json-log-viewer/](https://allproxy.github.io/json-log-viewer/)
 * Click **?** in the upper right and click the **Edit JavaScript** button to define JavaScript code to extract the Date, App Name, Message from your log records.
-
-### Install NPM Package
-> 1. `npm install -g jlogviewer`
-> 2. Run `jlogviewer`
 
 ### Build Package
 
