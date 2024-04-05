@@ -18,20 +18,18 @@ JSON Log Viewer is a web UI tool that makes JSON logs human readable.
 1. Online web application served by GitHub Pages.
 2. Displays easy to read compact list of log entries.
 3. Expands to show the full prettified JSON.
-5. Fields are customizable.
-6. Filtering and highlighted search matches.
-7. Log levels are colorized.
-8. Display human readable or UTC timestamps.
-9. Supports JSON lines and JSON file formats.
+4. Fields are customizable.
+5. Filtering and highlighted search matches.
+6. Log levels are colorized.
+7. Display human readable or UTC timestamps.
+8. Supports JSON lines and JSON file formats.
 
-### Build Package
+### Run Locally
 
 > 1. Clone repo.
-> 2. `npm install` # The production build may take a minute...
-> 3. `npm start`
-
-> Open `JSON Log Viewer` in browser;
->    * [localhost:8888/jlogviewer](http://localhost:8888/jlogviewer)
+> 2. `npm install`
+> 3. `npm start`   # Opens tab in your default browser
+> 4. Click `?` in upper right for help.
 
 ### Updating
 
