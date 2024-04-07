@@ -16,8 +16,8 @@
 
 <body><noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>document.location.hostname.includes("github.io") || document.location.hostname.includes("pages.github") ? document.title = "JSONLogs" : "/logviewer" === document.location.pathname || "/jlogviewer" === document.location.pathname ? document.title = "JLogViewer" : "/mitmproxy" === document.location.pathname ? document.title = "MitmProxy" : document.title = "AllProxy"</script>
     <script src="plugins/parsejson/plugin.js" type="text/javascript" />
 </body>
-<script>document.location.hostname.includes("github.io") || document.location.hostname.includes("pages.github") ? document.title = "JSONLogs" : "/logviewer" === document.location.pathname || "/jlogviewer" === document.location.pathname ? document.title = "JLogViewer" : "/mitmproxy" === document.location.pathname ? document.title = "MitmProxy" : document.title = "AllProxy"</script>
 
 </html>
