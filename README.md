@@ -11,7 +11,7 @@ JSON Log Viewer is a web UI tool that makes JSON logs human readable.
 ## JSON Log Viewer Online
 
 * Click [https://allproxy.github.io/json-log-viewer/](https://allproxy.github.io/json-log-viewer/)
-* Click **?** in the upper right and click the **Edit JavaScript** button to define JavaScript code to extract the Date, App Name, Message from your log records.
+* Click **?** in the upper right and click the **Edit JavaScript** button to define JavaScript code to extract the Date, Kind, Message from your log records.
 
 ## Features
 
