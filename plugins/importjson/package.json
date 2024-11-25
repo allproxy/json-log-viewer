@@ -1,0 +1,33 @@
+{
+	"name": "plugin-parse-json",
+	"displayName": "parseJSON",
+	"description": "Parse JSON",
+	"version": "0.0.1",
+	"private": true,
+	"license": "MIT",
+	"repository": "https://github.ibm.com/Dave-Christenson/jsonlogs",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"scripts": {
+		"build": "webpack",
+		"watch": "webpack --watch",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/webpack-env": "^1.16.2",
+		"@typescript-eslint/eslint-plugin": "^6.7.0",
+		"@typescript-eslint/parser": "^6.7.0",
+		"assert": "^2.0.0",
+		"eslint": "^8.26.0",
+		"process": "^0.11.10",
+		"ts-loader": "^9.2.5",
+		"typescript": "^5.4.2",
+		"webpack": "^5.52.1",
+		"webpack-cli": "^4.8.0"
+	}
+}

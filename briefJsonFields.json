@@ -1,1 +1,11 @@
-{}
+{
+    "action": true,
+    "status_code": true,
+    "StatusCode": true,
+    "error": true,
+    "Method": true,
+    "url": true,
+    "uri": true,
+    "path": true,
+    "metadata.deletionTimestamp": true
+}
