@@ -9,6 +9,7 @@
     "deletionTimestamp",
     "endpoint",
     "error",
+    "errors",
     "id",
     "kind",
     "name",
@@ -23,7 +24,7 @@
   "method": "advanced",
   "jsonLogScript": "// Function called to extract date, level, app name and message\n//\n// @param preJSONString: string - optional non-JSON string proceeding JSON object\n// @param jsonObject: {} - JSON log data\n// @returns {date: Date, level: string, category: string, appName: string, message: string, rawLine: string, additionalJSON: {} }\n//\n// category is the availability zone\n// appName is the pod name\n//\nconst extractDateLevelCategoryAppNameMessage = function (preJSONString, jsonObject) {\n    let level = 'info';\n    let date = new Date();\n    let category = '';\n    let kind = 'Kind_is_not_set';\n    let message = 'Message is not set - edit or replace client/public/parsejson/plugin.js';\n    let additionalJSON = {};\n    const ignoreFields = [];\n    // Kube object?\n    if (jsonObject.kind && jsonObject.metadata) {\n        kind = jsonObject.kind;\n        message = jsonObject.metadata.name;\n        if (jsonObject.metadata.creationTimestamp) {\n            date = new Date(jsonObject.metadata.creationTimestamp);\n        }\n        level = '';\n        additionalJSON['level'] = undefined;\n        // Errors detected by the parseJson plugin?\n        if (jsonObject['errors']) {\n            level = 'error';\n            additionalJSON['level'] = level;\n        }\n    }\n    else { // Check for other log formats\n    }\n    return { date, level, category, kind, message, rawLine: undefined, additionalJSON, ignoreFields };\n}",
   "queries": {},
-  "briefJsonFields": "{\n    \"action\": true,\n    \"status_code\": true,\n    \"StatusCode\": true,\n    \"error\": true,\n    \"Method\": true,\n    \"url\": true,\n    \"uri\": true,\n    \"path\": true,\n    \"metadata.deletionTimestamp\": true\n}",
+  "briefJsonFields": "{\n    \"action\": true,\n    \"status_code\": true,\n    \"StatusCode\": true,\n    \"error\": true,\n    \"errors\": true,\n    \"Method\": true,\n    \"url\": true,\n    \"uri\": true,\n    \"path\": true,\n    \"metadata.deletionTimestamp\": true\n}",
   "jsonSubQueries": "[]",
   "jsonQueries": "[]"
 }
