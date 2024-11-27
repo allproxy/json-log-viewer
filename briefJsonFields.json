@@ -3,6 +3,7 @@
     "status_code": true,
     "StatusCode": true,
     "error": true,
+    "errors": true,
     "Method": true,
     "url": true,
     "uri": true,
