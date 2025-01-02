@@ -9,7 +9,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "start": "cd ./node_modules/allproxy && ALLPROXY_APP=jlogviewer node ./headless.js"
+    "start": "ALLPROXY_DATA_DIR=$HOME/.jlogviewer node ./index.js && cd ./node_modules/allproxy && ALLPROXY_APP=jlogviewer ALLPROXY_DATA_DIR=$HOME/.jlogviewer node ./headless.js"
   },
   "repository": {
     "type": "git",
