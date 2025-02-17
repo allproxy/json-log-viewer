@@ -9,6 +9,7 @@
   ],
   "main": "index.js",
   "scripts": {
+    "install": "npm install allproxy",
     "start": "ALLPROXY_DATA_DIR=$HOME/.jlogviewer node ./index.js && cd ./node_modules/allproxy && ALLPROXY_APP=jlogviewer ALLPROXY_DATA_DIR=$HOME/.jlogviewer node ./headless.js"
   },
   "repository": {
@@ -21,8 +22,5 @@
   "bugs": {
     "url": "https://github.com/allproxy/json-log-viewer/issues"
   },
-  "homepage": "https://github.com/allproxy/json-log-viewer#readme",
-  "dependencies": {
-    "allproxy": "^3.54.3"
-  }
+  "homepage": "https://github.com/allproxy/json-log-viewer#readme"
 }
