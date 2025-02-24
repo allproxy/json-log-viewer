@@ -1,6 +1,6 @@
 {
   "name": "json-log-viewer",
-  "version": "3.54.3",
+  "version": "3.56.0",
   "description": "JSON Log Viewer",
   "keywords": [
     "json",
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/allproxy/json-log-viewer#readme",
   "dependencies": {
-    "allproxy": "^3.54.3"
+    "allproxy": "^3.55.0"
   }
 }
