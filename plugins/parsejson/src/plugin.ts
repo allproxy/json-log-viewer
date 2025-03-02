@@ -55,13 +55,13 @@ export function parseJSON(
 		let kindSet = false;
 		let messageSet = false;
 
-		const fieldValues: { field: string, value: string }[] = []; // array of {field, value} pairs  
+		const fieldValues: { field: string, value: string | number }[] = []; // array of {field, value} pairs  
 
 		// Recursively traverse JSON and build fieldValues array
 		function traverseJson(obj: { [key: string]: any }) {
 			for (let field in obj) {
 				const value = obj[field];
-				if (typeof field === 'string' && typeof value === 'string') {
+				if (typeof field === 'string' && (typeof value === 'string' || typeof value === 'number')) {
 					field = field.toLowerCase();
 					fieldValues.push({ field, value });
 				} else if (typeof value === 'object' && !Array.isArray(value)) {
@@ -82,7 +82,7 @@ export function parseJSON(
 		}
 
 		// Check for data, level, kind and message fields
-		function checkForDateLevelKindMessage(field: string, value: string) {
+		function checkForDateLevelKindMessage(field: string, value: string | number) {
 			if (!dateSet) {
 				if ((field.includes('time') || field.includes('date')) && isValidDate(value)) {
 					dateSet = true;
@@ -91,37 +91,49 @@ export function parseJSON(
 				}
 			}
 
+			if (typeof value !== 'string') return;
+
 			if (!levelSet) {
-				if (field === 'level' || field === 'severity') {
+				if (field === 'level') {
 					levelSet = true;
 					level = value;
 					return;
+				} else if (field === 'severity') {
+					level = value;
+					return;
 				} else if (field === 'error') {
-					levelSet = true;
 					level = 'error';
-
+					return;
 				}
 			}
 
 			if (!kindSet) {
-				if (field.length <= 64 && (field === 'kind' || field.startsWith("thread") || field.startsWith('app'))) {
+				if (field === 'kind' || field === 'app' || field === 'appname') {
 					kindSet = true;
+					kind = value;
+					return;
+				} else if (field.length <= 64 && (field.startsWith("thread") ||
+					field.startsWith('app') || field.endsWith('app'))) {
 					kind = value;
 					return;
 				}
 			}
 
 			if (!messageSet) {
-				if (field === 'message' || field === 'error') {
+				if (field === 'message' || field === 'msg' || field === 'error') {
 					messageSet = true;
+					message = value;
+					return;
+				} else if (field.startsWith('message')) {
 					message = value;
 					return;
 				}
 			}
+
 		}
 
 		// Returns true, if this is a valid date
-		function isValidDate(value: string) {
+		function isValidDate(value: string | number) {
 			try {
 				let date = new Date(value);
 				if (date.toString() === 'Invalid Date' && typeof value === 'string') {
