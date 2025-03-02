@@ -5,7 +5,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"license": "MIT",
-	"repository": "https://github.ibm.com/Dave-Christenson/jsonlogs",
+	"repository": "https://github.com/allproxy/json-log-viewer",
 	"engines": {
 		"vscode": "^1.74.0"
 	},
