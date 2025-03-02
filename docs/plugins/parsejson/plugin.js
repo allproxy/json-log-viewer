@@ -1,52 +1,12 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   parseJSON: () => (/* binding */ parseJSON)
-/* harmony export */ });
 // Function called to extract date, level, app name and message
 //
 // @param preJSONString: string - optional non-JSON string proceeding JSON object
 // @param jsonObject: {} - JSON log data
-// @returns {date: Date, level: string, category: string, appName: string, message: string, additionalJSON: {} }
+// @returns {date: Date, level: string, category: string, appName: string, message: string, rawLine: string, additionalJSON: {} }
 //
 // category is the availability zone
 // appName is the pod name
-window.parseJSON = parseJSON;
+//
 function parseJSON(preJSONString, jsonObject) {
     let level = 'info';
     let date = new Date();
@@ -63,19 +23,18 @@ function parseJSON(preJSONString, jsonObject) {
             date = new Date(jsonObject.metadata.creationTimestamp);
         }
         level = '';
-        additionalJSON.level = undefined;
+        additionalJSON['level'] = undefined;
         // Errors detected by the parseJson plugin?
         if (jsonObject['errors']) {
             level = 'error';
-            additionalJSON.level = level;
+            additionalJSON['level'] = level;
         }
     }
-    else { // Check for other log formats
-        let dateSet = false;
-        let levelSet = false;
-        let kindSet = false;
-        let messageSet = false;
+    else { // Try to dynamically find fields
+        let dateSet, levelSet, kindSet, messageSet = false;
+
         const fieldValues = []; // array of {field, value} pairs  
+
         // Recursively traverse JSON and build fieldValues array
         function traverseJson(obj) {
             for (let field in obj) {
@@ -83,21 +42,23 @@ function parseJSON(preJSONString, jsonObject) {
                 if (typeof field === 'string' && (typeof value === 'string' || typeof value === 'number')) {
                     field = field.toLowerCase();
                     fieldValues.push({ field, value });
-                }
-                else if (typeof value === 'object' && !Array.isArray(value)) {
+                } else if (typeof value === 'object' && !Array.isArray(value)) {
                     traverseJson(value);
                 }
             }
         }
         traverseJson(jsonObject);
+
         // Check each JSON field,value pair looking for date, info, kind and message
         for (const fieldValue of fieldValues) {
             const field = fieldValue.field;
             const value = fieldValue.value;
+
             checkForDateLevelKindMessage(field, value);
-            if (dateSet && levelSet && kindSet && messageSet)
-                break;
+
+            if (dateSet && levelSet && kindSet && messageSet) break;
         }
+
         // Check for data, level, kind and message fields
         function checkForDateLevelKindMessage(field, value) {
             if (!dateSet) {
@@ -107,47 +68,48 @@ function parseJSON(preJSONString, jsonObject) {
                     return;
                 }
             }
-            if (typeof value !== 'string')
-                return;
+
+            if (typeof value !== 'string') return;
+
             if (!levelSet) {
                 if (field === 'level') {
                     levelSet = true;
                     level = value;
                     return;
-                }
-                else if (field === 'severity') {
+                } else if (field === 'severity') {
                     level = value;
                     return;
-                }
-                else if (field === 'error') {
+                } else if (field === 'error') {
                     level = 'error';
                     return;
                 }
             }
+
             if (!kindSet) {
                 if (field === 'kind' || field === 'app' || field === 'appname') {
                     kindSet = true;
                     kind = value;
                     return;
-                }
-                else if (field.length <= 64 && (field.startsWith("thread") ||
+                } else if (field.length <= 64 && (field.startsWith("thread") ||
                     field.startsWith('app') || field.endsWith('app'))) {
                     kind = value;
                     return;
                 }
             }
+
             if (!messageSet) {
                 if (field === 'message' || field === 'msg' || field === 'error') {
                     messageSet = true;
                     message = value;
                     return;
-                }
-                else if (field.startsWith('message')) {
+                } else if (field.startsWith('message')) {
                     message = value;
                     return;
                 }
             }
+
         }
+
         // Returns true, if this is a valid date
         function isValidDate(value) {
             try {
@@ -159,21 +121,13 @@ function parseJSON(preJSONString, jsonObject) {
                         date = new Date(d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ':' + tokens[1]);
                     }
                 }
-                if (date.toString() === 'Invalid Date')
-                    return false;
-            }
-            catch (e) {
+                if (date.toString() === 'Invalid Date') return false;
+            } catch (e) {
                 return false;
             }
             return true;
         }
     }
-    return { date, level, category, kind, message, rawLine: undefined, additionalJSON, ignoreFields };
-}
 
-var __webpack_export_target__ = exports;
-for(var i in __webpack_exports__) __webpack_export_target__[i] = __webpack_exports__[i];
-if(__webpack_exports__.__esModule) Object.defineProperty(__webpack_export_target__, "__esModule", { value: true });
-/******/ })()
-;
-//# sourceMappingURL=plugin.js.map
+    return { date, level, category, kind, message, rawLine: undefined, additionalJSON, ignoreFields };
+};
