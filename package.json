@@ -22,8 +22,5 @@
   "bugs": {
     "url": "https://github.com/allproxy/json-log-viewer/issues"
   },
-  "homepage": "https://github.com/allproxy/json-log-viewer#readme",
-  "dependencies": {
-    "allproxy": "^3.55.0"
-  }
+  "homepage": "https://github.com/allproxy/json-log-viewer#readme"
 }
