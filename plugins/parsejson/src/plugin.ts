@@ -24,7 +24,8 @@ export function parseJSON(
 		message: string,
 		rawLine: string | undefined,
 		additionalJSON: { [key: string]: any },
-		ignoreFields: string[]
+		ignoreFields: string[],
+		typeahead: string[],
 	} {
 	let level = 'info';
 	let date = new Date();
@@ -33,7 +34,7 @@ export function parseJSON(
 	let message = `Message field not defined - click '?'`;
 	let additionalJSON: { [key: string]: any } = {};
 	const ignoreFields: string[] = [];
-
+	const typeahead: string[] = [];
 	// Kube object?
 	if (jsonObject.kind && jsonObject.metadata) {
 		kind = jsonObject.kind;
@@ -97,6 +98,7 @@ export function parseJSON(
 				if (field === 'level') {
 					levelSet = true;
 					level = value;
+					if (value.startsWith('err')) typeahead.push(field + ':' + value);
 					return;
 				} else if (field === 'severity') {
 					level = value;
@@ -106,6 +108,8 @@ export function parseJSON(
 					return;
 				}
 			}
+
+			if (field === 'error' && value.length > 0) typeahead.push(field + ':*');
 
 			if (!kindSet) {
 				if (field === 'kind' || field === 'app' || field === 'appname') {
@@ -151,5 +155,5 @@ export function parseJSON(
 		}
 	}
 
-	return { date, level, category, kind, message, rawLine: undefined, additionalJSON, ignoreFields };
+	return { date, level, category, kind, message, rawLine: undefined, additionalJSON, ignoreFields, typeahead };
 }
