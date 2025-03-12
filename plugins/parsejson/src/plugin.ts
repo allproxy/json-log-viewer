@@ -112,7 +112,7 @@ export function parseJSON(
 			if (field === 'error' && value.length > 0) typeahead.push(field + ':*');
 
 			if (!kindSet) {
-				if (field === 'kind' || field === 'app' || field === 'appname') {
+				if (field === 'kind' || field === 'app' || field === 'appname' || field === 'applicationname') {
 					kindSet = true;
 					kind = value;
 					return;
