@@ -11,7 +11,7 @@ const extractDateLevelCategoryAppNameMessage = function (preJSONString, jsonObje
     let level = 'info';
     let date = new Date();
     let category = '';
-    let kind = 'Kind_is_not_defined';
+    let kind = '';
     let message = "Message field not defined - click '?'";
     let additionalJSON = {};
     const ignoreFields = [];
@@ -63,7 +63,7 @@ const extractDateLevelCategoryAppNameMessage = function (preJSONString, jsonObje
         // Check for data, level, kind and message fields
         function checkForDateLevelKindMessage(field, value) {
             if (!dateSet) {
-                if ((field.includes('time') || field.includes('date')) && isValidDate(value)) {
+                if ((field.includes('ts') || field.includes('time') || field.includes('date')) && isValidDate(value)) {
                     dateSet = true;
                     date = new Date(value);
                     return;
@@ -90,7 +90,7 @@ const extractDateLevelCategoryAppNameMessage = function (preJSONString, jsonObje
             if (field === 'error' && value.length > 0) typeahead.push(field + ':*');
 
             if (!kindSet) {
-                if (field === 'kind' || field === 'app' || field === 'appname' || field === 'applicationname') {
+                if (field === 'kind' || field === 'app' || field === 'appname' || field === 'applicationname' || field === 'actionname') {
                     kindSet = true;
                     kind = value;
                     return;

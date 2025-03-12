@@ -30,7 +30,7 @@ export function parseJSON(
 	let level = 'info';
 	let date = new Date();
 	let category = '';
-	let kind = 'Kind_is_not_defined';
+	let kind = '';
 	let message = `Message field not defined - click '?'`;
 	let additionalJSON: { [key: string]: any } = {};
 	const ignoreFields: string[] = [];
@@ -85,7 +85,7 @@ export function parseJSON(
 		// Check for data, level, kind and message fields
 		function checkForDateLevelKindMessage(field: string, value: string | number) {
 			if (!dateSet) {
-				if ((field.includes('time') || field.includes('date')) && isValidDate(value)) {
+				if ((field.includes('ts') || field.includes('time') || field.includes('date')) && isValidDate(value)) {
 					dateSet = true;
 					date = new Date(value);
 					return;
@@ -112,7 +112,7 @@ export function parseJSON(
 			if (field === 'error' && value.length > 0) typeahead.push(field + ':*');
 
 			if (!kindSet) {
-				if (field === 'kind' || field === 'app' || field === 'appname' || field === 'applicationname') {
+				if (field === 'kind' || field === 'app' || field === 'appname' || field === 'applicationname' || field === 'actionname') {
 					kindSet = true;
 					kind = value;
 					return;
