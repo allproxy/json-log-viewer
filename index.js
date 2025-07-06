@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 const home = process.env.HOME ? process.env.HOME : process.env.USERPROFILE;
 const dataDir = process.env.ALLPROXY_DATA_DIR;
