@@ -27,13 +27,13 @@ export function parseJSON(
 		ignoreFields: string[],
 		typeahead: string[],
 	} {
-	let level = 'info';
-	let date = new Date();
+	let level = '';
+	let date = new Date(0);
 	let category = '';
 	let kind = '';
-	let message = `Message field not defined - click '?'`;
+	let message = ``;
 	let additionalJSON: { [key: string]: any } = {};
-	const ignoreFields: string[] = [];
+	const ignoreFields: string[] = []
 	const typeahead: string[] = [];
 	// Kube object?
 	if (jsonObject.kind && jsonObject.metadata) {

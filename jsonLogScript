@@ -9,7 +9,7 @@
 //
 const extractDateLevelCategoryAppNameMessage = function (preJSONString, jsonObject) {
     let level = 'info';
-    let date = new Date();
+    let date = new Date(0);
     let category = '';
     let kind = '';
     let message = "Message field not defined - click '?'";
